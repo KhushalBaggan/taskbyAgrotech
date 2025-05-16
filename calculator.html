@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>First Number : </td>
+            <td><input type="number" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Second Number : </td>
+            <td><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="result" id="result"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+                <td><button onclick="calc('+')">ADD</button> </td>
+                <td><button onclick="calc('-')">SUb</button></td>
+                <td> <button onclick="calc('*')">MUL</button></td>
+                <td> <button onclick="calc('/')">DIV</button></td>
+            </tr>
+    </table>
+    <script>
+        function calc(op){
+            let a = +document.getElementById('num1').value;
+            let b = +document.getElementById('num2').value;
+            let res ='';
+            switch (op){
+                case '+': res = a+b; break;            
+                case '-': res = a-b; break;            
+                case '/': res = a/b; break;            
+                case '*': res = a*b; break; 
+            }     
+            document.getElementById('result').textContent= 'result'+ res;      
+        }
+    </script>
+</body>
+</html>
